@@ -16,19 +16,7 @@ function App() {
       {
         gameCharacters.map(gameCharacter => <Agents gameCharacter={gameCharacter}></Agents>)
       }
-      {/* {
-        gameCharacters.map(gameCharacter => <Character displayName={gameCharacter.displayName}></Character>)
-      } */}
-
     </div>
   );
 }
-function Character(props) {
-  return (
-    <div>
-      <p>{props.displayName}</p>
-    </div>
-  )
-}
-
 export default App;
