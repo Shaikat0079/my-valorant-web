@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const Agents = ({ gameCharacter }) => {
-    const { displayName, developerName, abilities, backgroundGradientColors, role, displayIconSmall, fullPortrait } = gameCharacter
+    const { displayName, developerName, backgroundGradientColors, role, fullPortrait } = gameCharacter
     const [seconds, setSeconds] = useState(0);
     useEffect(() => {
         const interval = setInterval(() => {
