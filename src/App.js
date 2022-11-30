@@ -11,10 +11,14 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <h1>{gameCharacters.length}</h1>
+
+    <div className="grid gap-4 grid-cols-1 justify-items-center md:grid-cols-2 lg:grid-cols-3 ">
       {
-        gameCharacters.map(gameCharacter => <Agents gameCharacter={gameCharacter}></Agents>)
+        gameCharacters.filter(gameCharacter => gameCharacter.isPlayableCharacter === true)
+          .map(gameCharacter => <Agents
+            key={gameCharacter.uuid}
+            gameCharacter={gameCharacter}
+          ></Agents>)
       }
     </div>
   );
